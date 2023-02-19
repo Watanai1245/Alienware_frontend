@@ -8,8 +8,7 @@ const Bar = () => {
     const [filterValue, setFilterValue] = useState("");
 
     useEffect(() => {
-        fetchProducts(setItems)
-        fetchProducts(setSearchAPIData)
+        fetchProducts(setItems, setSearchAPIData)
     }, []);
 
 
@@ -22,9 +21,6 @@ const Bar = () => {
         }
         setFilterValue(event.target.value)
     }
-    useEffect(() => {
-        fetchProducts(setItems)
-    }, [])
 
     return (
         <div className="w-[1200px] shadow overflow-hidden border-b border-gray-200 sm:rounded-lg mt-7 ">
@@ -68,7 +64,9 @@ const Bar = () => {
                         <th className="px-6 py-3 text-center">Action</th>
                     </tr>
                 </thead>
-                <ProductContainer products={items} />
+                <tbody className="text-center">
+                    <ProductContainer products={items} />
+                </tbody>
             </table>
         </div>
     );
