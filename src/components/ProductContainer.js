@@ -9,7 +9,7 @@ export default function ProductContainer(props) {
     const listItems = products.map((item, index) => <NewItem
         key={index}
         pic=""
-        name={item.Name}
+        name={item.Name.length > 10 ? `${item.Name.substring(0, 10)}...` : item.Name}
         PID={item.PID}
         CID={item.CID}
         Price={item.Price}
