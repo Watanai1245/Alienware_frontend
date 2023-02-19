@@ -1,18 +1,12 @@
 import axios from "axios";
 const baseURL = "http://localhost:3000/MOCK_DATA.json"
 
-function fetchProducts(callBack) {
+function fetchProducts(callBack, setSearchAPIData) {
     axios.get(baseURL)
         .then((res) => {
             callBack(res.data)
+            setSearchAPIData(res.data)
         });
 }
 
-function findProducts(q, callBack) {
-    axios.get(baseURL + `&q=${q}`)
-        .then((res) => {
-            callBack(res.data)
-        });
-}
-
-export { fetchProducts, findProducts };
+export { fetchProducts };

@@ -17,5 +17,5 @@ export default function ProductContainer(props) {
         Detail={item.Detail.length > 50 ? `${item.Detail.substring(0, 50)}...` : item.Detail}
     />);
 
-    return <tbody className="text-center"> {listItems}</tbody>;
+    return [listItems];
 }
