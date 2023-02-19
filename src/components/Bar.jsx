@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ProductContainer from './ProductContainer';
 import { fetchProducts } from '../api';
-import React, { useState, useEffect } from "react";
-import NewItem from "./NewItem";
-import ProductContainer from "./ProductContainer";
 
 const Bar = () => {
     const [items, setItems] = useState([]);
@@ -11,14 +8,8 @@ const Bar = () => {
     const [filterValue, setFilterValue] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:3000/MOCK_DATA.json")
-            .then((res) => res.json())
-            .then((result) => {
-                setItems(result);
-                setSearchAPIData(result);
-
-                setSearchAPIData(result);
-            });
+        fetchProducts(setItems)
+        fetchProducts(setSearchAPIData)
     }, []);
 
 
