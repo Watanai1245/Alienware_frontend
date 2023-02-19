@@ -1,18 +1,30 @@
-import React from 'react'
-import TextField from '@mui/material/TextField';
+import React, { useState } from 'react'
+import { matchingApi } from "../axiosConfig";
 
 function Seach() {
 
-  const [products, setProducts] = React.useState(null);
-  let [search, setSearch] = React.useState(null);
+  const [products, setProducts] = useState([]);
+  const [search, setSearch] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleChange = (event) => {
+  const handleSeachChange = (event) => {
     setSearch(event.target.value);
   };
 
-  function onSearch() {
-    setProducts(null);
-    console.log("search")
+  function handleSearchBtn(e) {
+    setIsLoading(true);
+    matchingApi
+      .get("/match/findByName/" + search)
+      .then((res) => {
+        setProducts(res.data);
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+        alert(err.data);
+      })
+      .finally(setIsLoading(false));
+    //do something
   }
 
   return (
@@ -38,10 +50,14 @@ function Seach() {
                 "
         placeholder="Seach Product"
         variant="outlined"
-        onChange={handleChange}
+        value={search}
+        onChange={handleSeachChange}
       />
-      <button onClick={onSearch} className='ml-5' variant="contained">
-        <span className="rounded-full font-IBMPlexSansThai outline-0 focus:outline-none outline-none text-base block text-white bg-orange-700 hover:bg-orange-600 px-7 py-2 hover:bg-slate-700 hover:border-black ease-linear transition-all">
+      <button 
+        className='ml-5'
+        onClick={handleSearchBtn}
+        variant="contained">
+        <span className="rounded-full font-IBMPlexSansThai outline-0 focus:outline-none outline-none text-base block text-white bg-orange-700 hover:bg-orange-600 px-7 py-2 hover:border-black ease-linear transition-all">
           Seach
         </span>
       </button>
