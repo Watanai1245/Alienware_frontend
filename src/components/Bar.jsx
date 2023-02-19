@@ -43,9 +43,9 @@ const Bar = () => {
                 ml-4
                 mt-2
                 border-2 
-                border-orange-700
+                border-gray-700
                 focus:outline-none
-                focus:border-orange-700
+                focus:border-gray-900
                 rounded-full
                 "
                     placeholder="Seach Product"
