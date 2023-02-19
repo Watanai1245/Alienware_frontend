@@ -1,18 +1,12 @@
-import React, { useState, useEffect } from 'react'
-import NewItem from './NewItem';
+import React, { useState, useEffect } from 'react';
 import ProductContainer from './ProductContainer';
+import { fetchProducts } from '../api';
 
 const Bar = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/MOCK_DATA.json")
-            .then(res => res.json())
-            .then(
-                (result) => {
-                    setItems(result);
-                },
-            )
+        fetchProducts(setItems)
     }, [])
 
     return (
