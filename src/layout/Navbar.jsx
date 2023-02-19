@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar className='bg-green-700'>
+        <Toolbar className='bg-gray-900'>
           <h1 className='font-bold text-3xl text-white pl-3' variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Alienware Market
           </h1>
