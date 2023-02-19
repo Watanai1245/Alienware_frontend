@@ -27,7 +27,7 @@ function NewItem(props) {
             <td className="font-bol px-6 py-3">{Price}</td>
             <td className="font-bol px-6 py-3">{Stock}</td>
             <td className="font-bol px-6 py-3">{Detail}</td>
-            {/* <td className="px-6 py-3">
+            <td className="px-6 py-3">
                 <label className="inline-flex relative items-center cursor-pointer mt-2">
                     <input
                         type="checkbox"
@@ -50,7 +50,7 @@ function NewItem(props) {
                 <IconButton onClick={() => { console.log("remove") }}>
                     <DeleteOutlineIcon style={{ color: "DD225D" }} />
                 </IconButton>
-            </td> */}
+            </td>
         </tr>
     )
 }

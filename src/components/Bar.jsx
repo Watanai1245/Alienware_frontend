@@ -56,7 +56,6 @@ const Bar = () => {
           onInput={(event) => handleSeachChange(event)}
         />
       </div>
-      
       <table className="w-[1080px] divide-y divide-gray-200">
         <thead className="bg-gray-300">
           <tr>

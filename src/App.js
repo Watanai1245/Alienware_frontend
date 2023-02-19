@@ -16,21 +16,11 @@ function App() {
   return (
     <div>
       <Navbar />
-      <div className='flex flex-row justify-center'>
-        <Seach />
-        <div>
-          <button
-            onClick={() => setShowAddProduct(true)}
-            type="button"
-            className="rounded-full text-white bg-orange-700 hover:bg-orange-600  font-IBMPlexSansThai px-5 py-2 text-center ml-8 mb-2 mt-10 hover:border-black ease-linear transition-all">
-            + Add Product
-          </button>
-        </div>
+      <div className='flex flex-row'>
       </div>
       <div className='flex flex-row justify-center'>
-        <Bar />
+      <Bar />
       </div>
-          <AddProduct onClose={handleOnClose} visible={showAddProduct} />
     </div>
   );
 }
