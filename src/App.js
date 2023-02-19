@@ -7,8 +7,6 @@ function App() {
   return (
     <div>
       <Navbar />
-      <div className='flex flex-row'>
-      </div>
       <div div className='flex flex-row justify-center' >
         <Bar />
       </div>

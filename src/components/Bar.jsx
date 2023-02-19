@@ -31,7 +31,7 @@ const Bar = () => {
 
   return (
     <div className="w-[1080px] shadow overflow-hidden border-b border-gray-200 sm:rounded-lg mt-7 ">
-      <div className="ml-8 mt-8">
+      <div className="relative justify-center justify-items-center">
         <input
           type={"text"}
           className="
@@ -46,9 +46,9 @@ const Bar = () => {
                 ml-4
                 mt-2
                 border-2 
-                border-orange-700
+                border-gray-700
                 focus:outline-none
-                focus:border-orange-700
+                focus:border-gray-900
                 rounded-full
                 "
           placeholder="Seach Product"
