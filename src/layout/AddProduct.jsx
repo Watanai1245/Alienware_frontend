@@ -11,28 +11,6 @@ export default function ModalAdd({ visible, onClose }) {
       onClick={handleOnClose}
       className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex items-center justify-center"
     >
-      {/* <h1 className="font-semibold text-center text-xl text-gray-700">
-          Welcome back
-        </h1>
-        <p className="text-center text-gray-700 mb-5">Sign in</p>
-
-        <div className="flex flex-col">
-          <input
-            type="text"
-            className="border border-gray-700 p-2 rounded mb-5"
-            placeholder="email@example.com"
-          />
-          <input
-            type="text"
-            className="border border-gray-700 p-2 rounded mb-5"
-            placeholder="********"
-          />
-        </div>
-        <div className="text-center">
-          <button className="px-5 py-2 bg-gray-700 text-white rounded">
-            x
-          </button>
-        </div> */}
       <div class="relative bg-white rounded-lg shadow w-5/6">
         <button
           id="clcontainer"
@@ -63,15 +41,19 @@ export default function ModalAdd({ visible, onClose }) {
           <form class="space-y-6" action="#">
                     <div>
                         <label for="email" class="block mb-2 text-2xl font-sm text-gray-900 dark:text-black">Name</label>
-                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500 dark:placeholder-gray-400 dark:text-black" placeholder="" required/>
+                        <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500 dark:placeholder-gray-400 dark:text-black" placeholder="" required/>
                     </div>
                     <div>
-                        <label for="email" class="block mb-2 text-2xl font-sm text-gray-900 dark:text-black">Name</label>
-                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500 dark:placeholder-gray-400 dark:text-black" placeholder="" required/>
+                        <label for="email" class="block mb-2 text-2xl font-sm text-gray-900 dark:text-black">Pice</label>
+                        <input type="text" name="price" id="price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500 dark:placeholder-gray-400 dark:text-black" placeholder="" required/>
                     </div>
                     <div>
-                        <label for="email" class="block mb-2 text-2xl font-sm text-gray-900 dark:text-black">Name</label>
-                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500 dark:placeholder-gray-400 dark:text-black" placeholder="" required/>
+                        <label for="email" class="block mb-2 text-2xl font-sm text-gray-900 dark:text-black">Stock</label>
+                        <input type="text" name="strock" id="strock" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500 dark:placeholder-gray-400 dark:text-black" placeholder="" required/>
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2 text-2xl font-sm text-gray-900 dark:text-black">Detail</label>
+                        <input type="text" name="detail" id="detail" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500 dark:placeholder-gray-400 dark:text-black" placeholder="" required/>
                     </div>
                     
                     
