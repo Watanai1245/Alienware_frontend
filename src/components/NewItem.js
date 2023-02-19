@@ -43,7 +43,7 @@ function NewItem(props) {
                     ></div>
                 </label>
             </td>
-            <td className="px-6 py-3 justify-items-center">
+            <td className="justify-items-center">
                 <IconButton onClick={() => { console.log("edit") }}>
                     <EditIcon style={{ color: "DD225D" }} />
                 </IconButton>
