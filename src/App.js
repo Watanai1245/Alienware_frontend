@@ -28,7 +28,7 @@ function App() {
           <AddProduct onClose={handleOnClose} visible={showAddProduct} />
         </div>
       </div>
-      <div className='container flex flex-row justify-center'>
+      <div className='flex flex-row justify-center'>
         <Bar />
       </div>
     </div>
