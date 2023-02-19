@@ -15,7 +15,7 @@ const Bar = () => {
       }, [])
 
     return (
-        <div className="w-[1080px] shadow overflow-hidden border-b border-gray-200 sm:rounded-lg mt-7 ">
+        <div className="w-[1080px] shadow overflow-hidden border-b border-gray-200 sm:rounded-lg mt-7 justify-center">
             <table className="w-[1080px] divide-y divide-gray-200">
                 <thead className="bg-gray-300">
                     <tr >
