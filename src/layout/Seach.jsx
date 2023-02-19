@@ -7,24 +7,23 @@ function Seach() {
   const [search, setSearch] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSeachChange = (event) => {
-    setSearch(event.target.value);
-  };
+  // function handleSearchBtn(e) {
+  //   setIsLoading(true);
+  //   matchingApi
+  //     .get("/match/findByName/" + search)
+  //     .then((res) => {
+  //       setProducts(res.data);
+  //       console.log(res.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //       alert(err.data);
+  //     })
+  //     .finally(setIsLoading(false));
+  //   //do something
+  // }
 
   function handleSearchBtn(e) {
-    setIsLoading(true);
-    matchingApi
-      .get("/match/findByName/" + search)
-      .then((res) => {
-        setProducts(res.data);
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-        alert(err.data);
-      })
-      .finally(setIsLoading(false));
-    //do something
   }
 
   return (
@@ -48,10 +47,10 @@ function Seach() {
                 focus:border-orange-700
                 rounded-full
                 "
-        placeholder="Seach Product"
+        placeholder="Seach Product Name"
         variant="outlined"
         value={search}
-        onChange={handleSeachChange}
+        // onChange={handleSeachChange}
       />
       <button 
         className='ml-5'
