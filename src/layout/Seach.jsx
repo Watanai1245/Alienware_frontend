@@ -6,9 +6,12 @@ function Seach() {
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [searcAPIData, setSearchAPIData] =useState([]);
 
   const handleSeachChange = (event) => {
-    setSearch(event.target.value);
+    if(event.target.value === ''){
+      setProducts()
+    }
   };
 
   function handleSearchBtn(e) {
@@ -23,9 +26,10 @@ function Seach() {
         console.log(err);
         alert(err.data);
       })
-      .finally(setIsLoading(false));
-    //do something
-  }
+      .finally(setIsLoading(true));
+    
+    }
+ 
 
   return (
     <div className='ml-8 mt-8'>
@@ -51,7 +55,8 @@ function Seach() {
         placeholder="Seach Product"
         variant="outlined"
         value={search}
-        onChange={handleSeachChange}
+        onInput={(event)=>handleSeachChange(event)}
+        // onChange={handleSeachChange}
       />
       <button 
         className='ml-5'
