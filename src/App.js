@@ -18,10 +18,10 @@ function App() {
       <Navbar />
       <div className='flex flex-row'>
       </div>
-      <div className='flex flex-row justify-center'>
-      <Bar />
+      <div div className='flex flex-row justify-center' >
+        <Bar />
       </div>
-    </div>
+    </div >
   );
 }
 
