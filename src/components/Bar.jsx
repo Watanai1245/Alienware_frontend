@@ -12,21 +12,22 @@ const Bar = () => {
       .then((res) => res.json())
       .then((result) => {
         setItems(result);
+                    setSearchAPIData(result);
+                    
         setSearchAPIData(result);
       });
   }, []);
 
-  const handleSeachChange = (event) => {
-    if (event.target.value === "") {
-      setItems(searcAPIData);
-    } else {
-      const filterResult = searcAPIData.filter((item) =>
-        item.Name.toLowerCase().includes(event.target.value.toLowerCase())
-      );
-      setItems(filterResult);
+
+    const handleSeachChange = (event) =>{
+        if(event.target.value ===''){
+            setItems(searcAPIData)
+        }else{
+            const filterResult = searcAPIData.filter(item => item.Name.toLowerCase().includes(event.target.value.toLowerCase()))
+            setItems(filterResult)
+        }
+        setFilterValue(event.target.value)
     }
-    setFilterValue(event.target.value);
-  };
 
   return (
     <div className="w-[1080px] shadow overflow-hidden border-b border-gray-200 sm:rounded-lg mt-7 ">
