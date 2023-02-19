@@ -27,8 +27,8 @@ const Bar = () => {
     }, [])
 
     return (
-        <div className="w-[1080px] shadow overflow-hidden border-b border-gray-200 sm:rounded-lg mt-7 ">
-            <div className="ml-8 mt-8">
+        <div className="w-[1200px] shadow overflow-hidden border-b border-gray-200 sm:rounded-lg mt-7 ">
+            <div className="flex justify-center mt-4 mb-4">
                 <input
                     type={"text"}
                     className="
@@ -54,7 +54,7 @@ const Bar = () => {
                     onInput={(event) => handleSeachChange(event)}
                 />
             </div>
-            <table className="w-[1080px] divide-y divide-gray-200">
+            <table className="w-[1200px] divide-y divide-gray-200">
                 <thead className="bg-gray-300">
                     <tr>
                         <th className="px-6 py-3 text-center">Image</th>
