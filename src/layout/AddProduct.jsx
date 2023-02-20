@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import DropFileInput from "./DropFileInput";
+import axios from "axios";
 
 export default function ModalAdd({ visible, onClose }) {
   if (!visible) return null;
@@ -35,19 +37,15 @@ export default function ModalAdd({ visible, onClose }) {
           <span class="sr-only">Close modal</span>
         </button>
         <div class="px-6 py-6 lg:px-8">
-          <h1 class="mb-4 text-3xl  text-gray-900 dark:text-black-500">
+          <h1 class="mb-4 text-3xl  text-gray-900 dark:text-black-500 text-center">
             Add Product
           </h1>
           <form class="space-y-6" action="#">
+            <div>
+              <label for="text" class="block mb-2 text-2xl font-sm text-gray-900 dark:text-black">Product's Name</label>
+              <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500 dark:placeholder-gray-400 dark:text-black" placeholder="" required />
+            </div>
             
-            <div>
-              <label for="text" class="block mb-2 text-2xl font-sm text-gray-900 dark:text-black">Name</label>
-              <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500 dark:placeholder-gray-400 dark:text-black" placeholder="" required />
-            </div>
-            <div>
-              <label for="text" class="block mb-2 text-2xl font-sm text-gray-900 dark:text-black">Name</label>
-              <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500 dark:placeholder-gray-400 dark:text-black" placeholder="" required />
-            </div>
             <div>
               <label for="text" class="block mb-2 text-2xl font-sm text-gray-900 dark:text-black">Pice</label>
               <input type="text" name="price" id="price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500 dark:placeholder-gray-400 dark:text-black" placeholder="" required />
