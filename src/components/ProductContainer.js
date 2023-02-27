@@ -9,7 +9,7 @@ export default function ProductContainer(props) {
     const listItems = products.map((item, index) => <NewItem
         key={index}
         pic=""
-        name={item.Name}
+        name={item.Name.length > 10 ? `${item.Name.substring(0, 10)}...` : item.Name}
         PID={item.PID}
         CID={item.CID}
         Price={item.Price}
@@ -17,5 +17,5 @@ export default function ProductContainer(props) {
         Detail={item.Detail.length > 50 ? `${item.Detail.substring(0, 50)}...` : item.Detail}
     />);
 
-    return <tbody className="text-center"> {listItems}</tbody>;
+    return [listItems];
 }
